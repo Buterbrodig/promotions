@@ -1,0 +1,322 @@
+
+*{
+   padding: 0;
+   margin: 0;
+   border: 0;
+   word-break: break-word;
+}
+*,*:before,*:after{
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+   overflow-x: hidden;
+
+}
+html{
+   height: 100%;
+}
+
+input,button,textarea{font-family: inherit; }
+
+
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;
+   padding: 0;
+   border: none;
+   font: inherit;
+   color: inherit;
+   background-color: transparent;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
+
+body{
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+main{
+   flex: 1 1 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+
+
+
+@font-face{
+   font-family: 'WiGuru';
+   src: url("font/wiguru-13.ttf") format('truetype');
+   font-style: normal;
+   font-weight: 900;
+}
+@font-face{
+   font-family: 'Bebas_Neue';
+   src: url("font/BebasNeue.ttf") format('truetype');
+   font-style: normal;
+   font-weight: bold;
+}
+@font-face{
+   font-family: 'Clock';
+   src: url("font/digital_counter_7.ttf") format('truetype');
+   font-style: normal;
+   font-weight: normal;
+}
+@font-face {
+   font-family: 'Clock Italic';
+   src: url("font/digital_counter_7_italic.ttf") format('truetype');
+   font-style: italic;
+   font-weight: normal;
+}
+@font-face{
+   font-family: 'ClockBomb';
+   src: url("font/TickingTimebombBb.ttf") format('truetype');
+   font-style: normal;
+   font-weight: bold;
+}
+@font-face {
+   font-family: 'ClockBombIt';
+   src: url("font/TickingTimebombBbItalic.ttf") format('truetype');
+   font-style: italic;
+   font-weight: normal;
+}
+@font-face {
+   font-family: 'Gothland';
+   src: url("font/Gothland.ttf") format('truetype');
+   font-style: normal;
+   font-weight: bold;
+}
+@font-face {
+   font-family: 'CyrillicCompressed';
+   src: url("font/CyrillicCompressed.ttf") format('truetype');
+   font-style: normal;
+   font-weight: bold;
+}
+@font-face {
+   font-family: 'FuturisExtraC';
+   src: url("font/FuturisExtraC.ttf") format('truetype');
+   font-style: normal;
+   font-weight: bold;
+}
+
+
+html{
+   background: rgb(130,2,58);
+   background: radial-gradient(circle, rgba(130,2,58,1) 0%, rgb(110, 3, 163) 51%, rgb(1, 36, 78) 100%);
+}
+
+body{
+   background: url("image/background.jpg") no-repeat;
+   background-size: cover;
+   background-repeat: no-repeat;
+   font-family: "WiGuru", sans-serif;
+}
+
+#id_clock,.nickname{
+   position: relative;
+   font-size: 80px;
+   font-family: "ClockBomb", sans-serif;
+   color: black;
+   -webkit-text-stroke: 5px #faff9d;
+   text-transform: uppercase;
+   padding: 24px 0 15px;
+   text-align: left;
+   width: 100%;
+}
+@media (max-width:480px) {
+   .nickname{
+      font-size: 50px;
+   }
+      
+   }
+
+
+.container{
+   padding: 0 24px;
+   width: 100%;
+   margin: 0 auto;
+   max-width: 1900px;
+}
+header,footer{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   padding: 24px 24px 15px!important;
+}
+
+
+.main__wrapper{
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(8, 1fr);
+}
+.item{
+   aspect-ratio: 1;
+   padding: 5px;
+}
+@media (max-width:1600px) {
+   .main__wrapper{
+      grid-template-columns: repeat(5, 1fr);
+   }
+}
+@media (max-width:1200px) {
+   .main__wrapper{
+      grid-template-columns: repeat(4, 1fr);
+   }
+}
+@media (max-width:767px) {
+   .main__wrapper{
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+}
+
+.text-block{
+   position: relative;
+   grid-column: span 2;
+   aspect-ratio: 2 / 1;
+
+   font-weight: 700;
+   font-size: 32px;
+   color: #fff; 
+   letter-spacing: 0.02em;
+   text-shadow: 0 0px 11px rgb(249, 130, 12);
+   font-family: "CyrillicCompressed", sans-serif;
+}
+.text-block ul{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+.text-block span {
+   font-size: 40px;
+   letter-spacing: 0.07em;
+
+}
+.text-block li {
+   padding: 5px;
+   white-space: nowrap;
+}
+@media (max-width:480px) {
+   .main__wrapper{
+      grid-template-columns: 1fr;
+   }
+   .text-block{
+      grid-column: span 1;
+   }
+   .text-block{
+      font-size: 25px;
+      aspect-ratio: auto;
+
+   }
+   .text-block ul{
+      padding: 24px 0;
+      position: relative;
+   }
+   .text-block span {
+      font-size: 34px;
+      letter-spacing: 0.07em;
+   
+   }
+}
+.item__price{
+   position: relative;
+   z-index: 1;
+   color: #fff;
+   font-size: 56px;
+   text-align: center;
+   text-shadow: 1px 1px 0 black,
+   2px 2px 0 black,
+   3px 3px 0 black,
+   4px 4px 0 black,
+   5px 5px 0 black,
+   6px 6px 0 #fff59d;
+   -webkit-text-stroke: 2px black;
+   font-family: "CyrillicCompressed", sans-serif;
+}
+.item__cnt{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   padding-bottom: 10px;
+   position: relative;
+   justify-content: flex-end;
+   align-items: center;
+   flex-direction: column;
+   overflow: hidden;
+   border-radius: 20px;
+   background-color: #000;
+   border:solid 8px  rgba(215, 149, 248, 0.877);
+   box-shadow:0 0 50px 10px rgb(196, 77, 255);
+}
+.item__cnt img{
+   position: absolute;
+   top: 12px;
+   height: calc(100% - 24px);
+   left: 50%;
+   transform: translateX(-50%);
+   object-fit: contain;
+}
+.item__promotion{
+   display: none;
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   text-transform: uppercase;
+   font-size: 45px;
+   color: rgb(0 146 221); 
+   text-shadow: 0 -1px rgba(0,0,0,.1);
+   font-family: "CyrillicCompressed", sans-serif;
+}
+
+.best,.new,.hit{
+   display: block;
+}
+.best{
+   color: #FFD700;
+   animation: pulsateBEST 1s infinite 1s;
+}
+.new{
+   animation: pulsate 1s infinite 0.5s;
+}
+.hit{
+   color: rgb(59 176 143);
+   animation: pulsateHIT 1s infinite 1.5s;
+}
+
+@keyframes pulsate {
+   50% { color: red; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в "color: цвет;" подбери какой нравится*/
+}
+
+@keyframes pulsateHIT {
+   50% { color: darkmagenta; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в "color: цвет;" подбери какой нравится*/
+}
+
+@keyframes pulsateBEST {
+   50% { color: midnightblue; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; } /* цвет в "color: цвет;" подбери какой нравится*/
+} 
